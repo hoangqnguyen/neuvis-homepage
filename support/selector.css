@@ -1,0 +1,34 @@
+/* The app picker belongs to Neuvis; each destination owns its app theme. */
+.support-picker { max-width: 900px; margin: 0 auto; padding: 78px 28px 100px; min-height: calc(100svh - 265px); }
+.picker-heading { margin-bottom: 42px; }
+.picker-heading h1 { font-family: var(--display); font-size: clamp(2.5rem, 6vw, 4.4rem); font-weight: 700; letter-spacing: -.04em; line-height: 1.08; }
+.picker-heading p { margin-top: 17px; color: var(--muted); font-size: 1.12rem; }
+.picker-heading .picker-translation { margin-top: 5px; font-size: .96rem; }
+.app-list { list-style: none; display: grid; gap: 20px; }
+.app-choice { display: flex; align-items: center; gap: 24px; padding: 28px; border: 2px solid var(--line); background: var(--surface); border-radius: 20px; transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+.app-choice:hover { border-color: #7565ef; transform: translateY(-3px); box-shadow: 0 7px 0 rgba(81,66,222,.12); }
+.app-choice:active { transform: translateY(0); box-shadow: none; }
+.app-choice__icon { flex: 0 0 auto; width: 96px; height: 96px; border-radius: 23%; object-fit: cover; }
+.app-choice__copy { flex: 1; min-width: 0; }
+.app-choice h2 { font-family: var(--display); font-size: 1.9rem; font-weight: 650; letter-spacing: -.025em; line-height: 1.2; }
+.app-choice__copy p { color: var(--muted); font-size: 1rem; margin-top: 6px; }
+.app-choice__languages { display: block; color: var(--muted); font-size: .82rem; margin-top: 7px; }
+.app-choice__action { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; gap: 16px; padding: 12px 17px; color: #fff; background: #5142de; border-radius: 10px; font-weight: 600; }
+.app-choice__action span { font-size: 1.3rem; }
+.picker-contact { margin-top: 30px; color: var(--muted); font-size: .95rem; }
+.picker-contact a, noscript a { color: var(--teal-br); text-decoration: underline; text-underline-offset: 4px; }
+.support-picker a:focus-visible, .nav a:focus-visible, .nav button:focus-visible { outline: 3px solid var(--teal-br); outline-offset: 5px; }
+@media (max-width: 600px) {
+  .support-picker { padding: 50px 22px 65px; min-height: calc(100svh - 280px); }
+  .picker-heading { margin-bottom: 32px; }
+  .app-choice { display: grid; grid-template-columns: 72px minmax(0,1fr); gap: 18px; padding: 24px; }
+  .app-choice__icon { width: 72px; height: 72px; }
+  .app-choice h2 { font-size: 1.7rem; }
+  .app-choice__copy p { font-size: .93rem; }
+  .app-choice__action { grid-column: 1 / -1; margin-top: 3px; justify-content: space-between; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .app-choice { transition: none; }
+  .app-choice:hover { transform: none; }
+}

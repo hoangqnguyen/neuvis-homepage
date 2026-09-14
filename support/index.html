@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pupata support &amp; privacy — Neuvis</title>
-<meta name="description" content="English and Vietnamese support, privacy details, and contact information for the Pupata movement timer." />
+<title>App support — Neuvis</title>
+<meta name="description" content="Choose your Neuvis app for help, troubleshooting, and privacy information." />
 <meta name="theme-color" content="#f5f5f0" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Pupata support &amp; privacy" />
-<meta property="og:description" content="Help, privacy details, and contact information for Pupata." />
+<meta property="og:title" content="Neuvis app support" />
+<meta property="og:description" content="Choose your app to find support and privacy information." />
 <meta property="og:image" content="https://neuvis.dev/assets/og.png" />
 <meta property="og:url" content="https://neuvis.dev/support/" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -24,201 +24,65 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../styles.css" />
+<link rel="stylesheet" href="selector.css" />
+<script>
+// Keep previously published app-specific bookmarks working after the picker move.
+(function () {
+  var legacy = ['#privacy', '#english', '#tieng-viet', '#contact'];
+  function redirectLegacyBookmark() {
+    if (legacy.indexOf(location.hash) !== -1) {
+      location.replace('pupata/' + location.hash);
+    }
+  }
+  window.addEventListener('hashchange', redirectLegacyBookmark);
+  redirectLegacyBookmark();
+})();
+</script>
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
 <div class="grid-bg" aria-hidden="true"></div>
-
 <header class="nav" id="top">
   <a class="nav__brand" href="../" aria-label="Neuvis home">
     <img src="../assets/mark.png" alt="" class="nav__mark" width="34" height="34" />
     <span class="nav__name">NEUVIS</span>
   </a>
-  <nav class="nav__links" aria-label="Support page">
-    <a href="#english">English</a>
-    <a href="#tieng-viet" lang="vi">Tiếng Việt</a>
-    <a href="#privacy">Privacy</a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="../">Home</a>
+    <a href="./" aria-current="page">Support</a>
   </nav>
   <button class="theme" id="themeBtn" aria-label="Switch to dark mode" title="Toggle theme"><span class="theme__icon">☾</span></button>
-  <a href="mailto:support@neuvis.dev" class="btn btn--ghost nav__cta">
-    <span>Email support</span><i class="arrow">↗</i>
-  </a>
+  <a href="mailto:support@neuvis.dev" class="btn btn--ghost nav__cta"><span>Email support</span><i class="arrow" aria-hidden="true">↗</i></a>
   <button class="nav__menu" aria-label="Menu" id="menuBtn">≡</button>
 </header>
-
-<main class="support-page">
-  <section class="support-hero">
-    <p class="hero__eyebrow reveal"><span class="dot"></span>Product support · Pupata</p>
-    <h1 class="support-hero__title reveal" style="--d:1">Move with Pip.<br /><em>We can help.</em></h1>
-    <p class="support-hero__lede reveal" style="--d:2">
-      Support and privacy information for Pupata, a gentle movement timer from Neuvis.
-      Trợ giúp và thông tin quyền riêng tư cho ứng dụng Pupata.
-    </p>
-    <div class="support-hero__actions reveal" style="--d:3">
-      <a href="mailto:support@neuvis.dev" class="btn btn--solid"><span>support@neuvis.dev</span><i class="arrow">↗</i></a>
-      <a href="#privacy" class="btn btn--ghost"><span>Privacy · Quyền riêng tư</span></a>
-    </div>
-    <p class="policy-meta reveal" style="--d:4">Updated 14 September 2026 · Cập nhật ngày 14 tháng 9 năm 2026</p>
-  </section>
-
-  <div class="support-shell">
-    <aside class="support-toc" aria-label="On this page">
-      <span class="kicker">On this page</span>
-      <nav>
-        <a href="#english"><span>01</span> English support</a>
-        <a href="#tieng-viet"><span>02</span> Hỗ trợ tiếng Việt</a>
-        <a href="#privacy"><span>03</span> Privacy · Quyền riêng tư</a>
-        <a href="#contact"><span>04</span> Contact · Liên hệ</a>
-      </nav>
-    </aside>
-
-    <div class="support-content">
-      <section class="support-section" id="english" lang="en">
-        <span class="kicker">01 — English support</span>
-        <h2>Help with Pupata</h2>
-        <p class="support-section__intro">Pupata keeps short movement sessions, progress, and Pip's rewards easy to manage. Try these steps first.</p>
-
-        <div class="support-grid">
-          <article class="support-card">
-            <span class="support-card__no">01</span>
-            <h3>Sessions and sound</h3>
-            <p>Pupata pauses a running timer when the app leaves the foreground. Reopen Pupata and choose to continue or end the session. Check Sound, Haptics, and Reduce Motion in Settings if cues or animation do not match your preference.</p>
-          </article>
-          <article class="support-card">
-            <span class="support-card__no">02</span>
-            <h3>Reminders</h3>
-            <p>Enable reminders inside Pupata, then allow notifications in iOS Settings. If reminders stop, confirm notification permission and the scheduled time in Pupata.</p>
-          </article>
-          <article class="support-card">
-            <span class="support-card__no">03</span>
-            <h3>iCloud sync</h3>
-            <p>Sign in to iCloud on the device and enable iCloud sync in Pupata. Keep the app open briefly after a change so it can finish. Sync requires network access and the same iCloud account on each device.</p>
-          </article>
-          <article class="support-card">
-            <span class="support-card__no">04</span>
-            <h3>Cosmetic packs</h3>
-            <p>This version of Pupata has no paid pack available. Future purchases, if offered, will be cosmetic packs only. Level-earned outfits and progress rewards will remain earned in the app.</p>
-          </article>
-        </div>
-
-        <div class="support-callout">
-          <h3>Sending diagnostics</h3>
-          <p>Settings includes an export for technical diagnostics. Review the export before attaching it to an email. You can also tell us your iOS version, Pupata version, and the steps that led to the problem.</p>
-        </div>
-      </section>
-
-      <section class="support-section" id="tieng-viet" lang="vi">
-        <span class="kicker">02 — Hỗ trợ tiếng Việt</span>
-        <h2>Trợ giúp với Pupata</h2>
-        <p class="support-section__intro">Pupata giúp bạn quản lý các buổi vận động ngắn, tiến trình và phần thưởng của Pip. Bạn có thể thử các bước sau trước.</p>
-
-        <div class="support-grid">
-          <article class="support-card">
-            <span class="support-card__no">01</span>
-            <h3>Buổi tập và âm thanh</h3>
-            <p>Pupata tạm dừng bộ đếm giờ đang chạy khi ứng dụng không còn ở màn hình trước. Hãy mở lại Pupata rồi chọn tiếp tục hoặc kết thúc buổi tập. Kiểm tra Âm thanh, Rung phản hồi và Giảm chuyển động trong Cài đặt nếu tín hiệu hoặc chuyển động chưa đúng ý bạn.</p>
-          </article>
-          <article class="support-card">
-            <span class="support-card__no">02</span>
-            <h3>Lời nhắc</h3>
-            <p>Bật lời nhắc trong Pupata, sau đó cho phép thông báo trong phần Cài đặt của iOS. Nếu lời nhắc ngừng hoạt động, hãy kiểm tra lại quyền thông báo và giờ nhắc trong Pupata.</p>
-          </article>
-          <article class="support-card">
-            <span class="support-card__no">03</span>
-            <h3>Đồng bộ iCloud</h3>
-            <p>Đăng nhập iCloud trên thiết bị và bật đồng bộ iCloud trong Pupata. Giữ ứng dụng mở một lúc sau khi thay đổi để hoàn tất đồng bộ. Các thiết bị cần có mạng và dùng cùng tài khoản iCloud.</p>
-          </article>
-          <article class="support-card">
-            <span class="support-card__no">04</span>
-            <h3>Gói trang phục</h3>
-            <p>Phiên bản Pupata này chưa có gói trả phí. Nếu được cung cấp sau này, giao dịch chỉ dành cho các gói trang trí. Trang phục theo cấp độ và phần thưởng tiến trình vẫn phải được mở khóa trong ứng dụng.</p>
-          </article>
-        </div>
-
-        <div class="support-callout">
-          <h3>Gửi dữ liệu chẩn đoán</h3>
-          <p>Trong Cài đặt có chức năng xuất dữ liệu chẩn đoán kỹ thuật. Hãy xem lại tệp trước khi đính kèm vào email. Bạn cũng có thể cho chúng tôi biết phiên bản iOS, phiên bản Pupata và các bước dẫn đến sự cố.</p>
-        </div>
-      </section>
-
-      <section class="support-section privacy-section" id="privacy">
-        <span class="kicker">03 — Privacy · Quyền riêng tư</span>
-        <h2>Pupata privacy notice</h2>
-        <p class="support-section__intro">This notice explains what the current version of Pupata stores and which service providers it uses. It is available in English and Vietnamese.</p>
-
-        <div class="privacy-language" lang="en">
-          <h3>Information on your device</h3>
-          <p>Pupata stores your settings, completed-session history, progress, rewards, equipped items, and reminder choices on your device. Pupata does not provide its own account login. Workout reminders are scheduled through iOS after you grant notification permission.</p>
-
-          <h3>Optional iCloud sync</h3>
-          <p>If you enable iCloud sync, Pupata stores a versioned progress record in your private Apple CloudKit database. It can include completed sessions, routine timing and completion details, settings, progress and rewards, cosmetic ownership records, and the equipped item. The analytics consent setting is excluded from the iCloud record. Neuvis does not read your private records during normal support.</p>
-          <p>Deleting local data in Pupata clears the current device only; an existing iCloud copy is not deleted by that action. iCloud processing is provided by Apple under its <a class="inline-link" href="https://www.apple.com/legal/privacy/" rel="noopener noreferrer">privacy policy</a>.</p>
-
-          <h3>Optional product analytics</h3>
-          <p>“Share anonymous usage” is off by default. If you turn it on, Pupata initializes PostHog and sends only three event types: onboarding completed, workout started, and workout completed. Event properties use broad categories such as language, routine, rounds, duration, completion, and reward ranges.</p>
-          <p>Pupata does not send workout records, record identifiers, calendar dates, free-form text, taps, screens, session replay, screenshots, or precise location to PostHog. It does not create identifiable person profiles or use an IP address to enrich location. The PostHog project is hosted in the United States. Turning analytics off stops future capture and resets the anonymous analytics identity. PostHog processes this data under its <a class="inline-link" href="https://posthog.com/privacy" rel="noopener noreferrer">privacy notice</a>.</p>
-
-          <h3>Purchase infrastructure</h3>
-          <p>RevenueCat helps Pupata verify and restore future cosmetic pack purchases. It can receive an anonymous app user identifier, store transaction information, and purchase ownership status for those functions. This service operates independently of the optional PostHog setting. No paid packs are available in this version.</p>
-          <p>Apple handles App Store payments. RevenueCat processes purchase information under its <a class="inline-link" href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer">privacy policy</a>.</p>
-
-          <h3>Sharing and choices</h3>
-          <p>Neuvis does not sell your personal information and Pupata contains no advertising. Data is shared with Apple, PostHog, or RevenueCat only for the functions described above. You can leave analytics off, turn it off later, disable iCloud sync, revoke notification permission, or delete local data from Pupata Settings.</p>
-        </div>
-
-        <hr class="language-rule" />
-
-        <div class="privacy-language" lang="vi">
-          <h2>Thông báo quyền riêng tư của Pupata</h2>
-          <p>Thông báo này giải thích dữ liệu mà phiên bản Pupata hiện tại lưu trữ và các nhà cung cấp dịch vụ mà ứng dụng sử dụng.</p>
-
-          <h3>Thông tin trên thiết bị</h3>
-          <p>Pupata lưu trên thiết bị các tùy chọn cài đặt, lịch sử buổi tập đã hoàn thành, tiến trình, phần thưởng, vật phẩm đang dùng và lựa chọn lời nhắc. Pupata không có hệ thống tài khoản riêng. Lời nhắc tập luyện được lên lịch qua iOS sau khi bạn cho phép thông báo.</p>
-
-          <h3>Đồng bộ iCloud không bắt buộc</h3>
-          <p>Nếu bạn bật đồng bộ iCloud, Pupata lưu một bản ghi tiến trình có phiên bản trong cơ sở dữ liệu Apple CloudKit riêng tư của bạn. Bản ghi có thể gồm các buổi tập đã hoàn thành, thời lượng và kết quả bài tập, cài đặt, tiến trình và phần thưởng, quyền sở hữu vật phẩm trang trí và vật phẩm đang dùng. Lựa chọn chia sẻ dữ liệu phân tích không được đưa vào bản ghi iCloud. Neuvis không đọc bản ghi riêng tư của bạn trong quá trình hỗ trợ thông thường.</p>
-          <p>Thao tác xóa dữ liệu cục bộ trong Pupata chỉ xóa dữ liệu trên thiết bị hiện tại; bản sao hiện có trên iCloud không bị xóa theo thao tác đó. Apple cung cấp và xử lý iCloud theo <a class="inline-link" href="https://www.apple.com/vn/legal/privacy/" rel="noopener noreferrer">chính sách quyền riêng tư</a> của Apple.</p>
-
-          <h3>Góp ý qua dữ liệu sử dụng</h3>
-          <p>“Chia sẻ dữ liệu sử dụng ẩn danh” mặc định ở trạng thái tắt. Nếu bạn bật tùy chọn này, Pupata khởi tạo PostHog và chỉ gửi ba loại sự kiện: hoàn tất làm quen, bắt đầu buổi tập và hoàn thành buổi tập. Thuộc tính sự kiện chỉ dùng các nhóm thông tin khái quát như ngôn ngữ, bài tập, số vòng, thời lượng, mức độ hoàn thành và khoảng phần thưởng.</p>
-          <p>Pupata không gửi cho PostHog nhật ký buổi tập, mã bản ghi, ngày theo lịch, nội dung tự do, thao tác chạm, màn hình, bản ghi phiên, ảnh chụp màn hình hay vị trí chính xác. Ứng dụng không tạo hồ sơ người dùng định danh và không dùng địa chỉ IP để bổ sung thông tin vị trí. Dự án PostHog được lưu trữ tại Hoa Kỳ. Khi tắt phân tích, Pupata dừng gửi sự kiện mới và đặt lại danh tính phân tích ẩn danh. PostHog xử lý dữ liệu theo <a class="inline-link" href="https://posthog.com/privacy" rel="noopener noreferrer">thông báo quyền riêng tư</a> của họ.</p>
-
-          <h3>Mua gói trang trí</h3>
-          <p>RevenueCat giúp Pupata xác minh và khôi phục các giao dịch mua gói trang trí trong tương lai. RevenueCat có thể nhận mã người dùng ứng dụng ẩn danh, thông tin giao dịch của cửa hàng và trạng thái sở hữu giao dịch cho các chức năng này. Dịch vụ này hoạt động độc lập với tùy chọn PostHog. Phiên bản này chưa có gói trả phí.</p>
-          <p>Apple xử lý thanh toán trên App Store. RevenueCat xử lý thông tin giao dịch theo <a class="inline-link" href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer">chính sách quyền riêng tư</a> của họ.</p>
-
-          <h3>Chia sẻ dữ liệu và lựa chọn của bạn</h3>
-          <p>Neuvis không bán thông tin cá nhân của bạn và Pupata không có quảng cáo. Dữ liệu chỉ được chia sẻ với Apple, PostHog hoặc RevenueCat cho các chức năng đã mô tả ở trên. Bạn có thể không bật phân tích, tắt tùy chọn này sau đó, tắt đồng bộ iCloud, thu hồi quyền thông báo hoặc xóa dữ liệu cục bộ trong Cài đặt của Pupata.</p>
-        </div>
-      </section>
-
-      <section class="support-contact" id="contact">
-        <span class="reticle__b tl"></span><span class="reticle__b tr"></span>
-        <span class="reticle__b bl"></span><span class="reticle__b br"></span>
-        <span class="kicker">04 — Contact · Liên hệ</span>
-        <h2>Still need help?<br /><em>Vẫn cần trợ giúp?</em></h2>
-        <p>Email your question in English or Vietnamese. Please do not include passwords, payment details, or sensitive health information.</p>
-        <p lang="vi">Gửi câu hỏi bằng tiếng Anh hoặc tiếng Việt. Vui lòng không gửi mật khẩu, thông tin thanh toán hoặc thông tin sức khỏe nhạy cảm.</p>
-        <a href="mailto:support@neuvis.dev" class="btn btn--solid btn--lg"><span>support@neuvis.dev</span><i class="arrow">↗</i></a>
-      </section>
-    </div>
+<main class="support-picker">
+  <div class="picker-heading">
+    <h1>Choose your app</h1>
+    <p>Find help, answers, and privacy information.</p>
+    <p class="picker-translation" lang="vi">Chọn ứng dụng bạn cần hỗ trợ.</p>
   </div>
+  <ul class="app-list" aria-label="Apps">
+    <!-- Add each app here with its own support route, icon, and identity. -->
+    <li>
+      <a class="app-choice app-choice--pupata" href="pupata/" aria-label="Pupata support">
+        <img class="app-choice__icon" src="../assets/pupata/icon.png" width="96" height="96" alt="" />
+        <div class="app-choice__copy">
+          <h2>Pupata</h2>
+          <p>Interval workouts with Pip</p>
+          <span class="app-choice__languages">English &amp; Tiếng Việt</span>
+        </div>
+        <span class="app-choice__action">Get help <span aria-hidden="true">↗</span></span>
+      </a>
+    </li>
+  </ul>
+  <p class="picker-contact">Need a hand? <a href="mailto:support@neuvis.dev">Email support</a></p>
+  <noscript><p id="privacy">Looking for privacy information? <a href="pupata/#privacy">Read Pupata’s privacy notice.</a></p></noscript>
 </main>
-
 <footer class="footer">
-  <div class="footer__brand">
-    <img src="../assets/mark.png" alt="" width="30" height="30" />
-    <span>NEUVIS DEVELOPMENT CO., LTD</span>
-  </div>
-  <nav class="footer__links" aria-label="Footer">
-    <a href="../">Home</a>
-    <a href="./">Support</a>
-    <a href="#privacy">Privacy</a>
-    <a href="mailto:support@neuvis.dev">Contact</a>
-  </nav>
+  <div class="footer__brand"><img src="../assets/mark.png" alt="" width="30" height="30" /><span>NEUVIS DEVELOPMENT CO., LTD</span></div>
+  <nav class="footer__links" aria-label="Footer"><a href="../">Home</a><a href="pupata/#privacy">Pupata privacy</a><a href="mailto:support@neuvis.dev">Contact</a></nav>
   <p class="footer__legal">© <span id="yr">2026</span> Neuvis Development Co., Ltd · neuvis.dev</p>
 </footer>
-
 <script src="../script.js"></script>
 </body>
 </html>

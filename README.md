@@ -14,7 +14,7 @@ JetBrains Mono).
 ```
 homepage/
 ├── index.html        # single-page site
-├── support/          # Pupata support and privacy page
+├── support/          # App picker and themed app support pages
 ├── styles.css        # all styling
 ├── script.js         # scroll reveals, mobile menu
 ├── assets/           # logo, mark, favicon, og image
@@ -27,8 +27,13 @@ homepage/
 Published routes:
 
 - `/` — Neuvis homepage
-- `https://neuvis.dev/support/` — Pupata support in English and Vietnamese
-- `https://neuvis.dev/support/#privacy` — Pupata privacy notice
+- `https://neuvis.dev/support/` — choose an app
+- `https://neuvis.dev/support/pupata/` — Pupata-themed help in English and Vietnamese
+- `https://neuvis.dev/support/pupata/#privacy` — Pupata privacy notice
+
+The former `/support/#privacy` bookmark redirects to Pupata’s privacy section.
+Add future app entries to `support/index.html`, with a dedicated subdirectory
+for each app’s support page and theme.
 
 ## Develop
 
