@@ -14,6 +14,7 @@ JetBrains Mono).
 ```
 homepage/
 ├── index.html        # single-page site
+├── support/          # Pupata support and privacy page
 ├── styles.css        # all styling
 ├── script.js         # scroll reveals, mobile menu
 ├── assets/           # logo, mark, favicon, og image
@@ -22,6 +23,12 @@ homepage/
 ├── robots.txt
 └── sitemap.xml
 ```
+
+Published routes:
+
+- `/` — Neuvis homepage
+- `https://neuvis.dev/support/` — Pupata support in English and Vietnamese
+- `https://neuvis.dev/support/#privacy` — Pupata privacy notice
 
 ## Develop
 
